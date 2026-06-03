@@ -32,9 +32,9 @@ void handleRoot() {
   String html = "<!DOCTYPE html><html><head><meta charset='utf-8'>";
   html += "<meta name='viewport' content='width=device-width,initial-scale=1'>";
   html += "<title>ESP32 DHT22 - Realtime</title>";
-  html += "<style>body{font-family:Arial,Helvetica,sans-serif;padding:24px;background:linear-gradient(180deg,#f0f4f8,#ffffff);} .card{background:#ffffff;padding:16px;border-radius:10px;max-width:760px;margin:0 auto;box-shadow:0 4px 18px rgba(20,30,60,0.08);} h2{margin:0 0 12px 0;color:#1f3a93;} p{margin:6px 0;font-size:1.05em;color:#333;} .icon{margin-right:8px;font-size:1.1em;} table{background:#fff;} th,td{font-size:0.95em;} </style>";
+  html += "<style>body{font-family:Arial,Helvetica,sans-serif;padding:24px;background:linear-gradient(180deg,#f0f4f8,#ffffff);} .card{background:#ffffff;padding:16px;border-radius:10px;max-width:760px;margin:0 auto;box-shadow:0 4px 18px rgba(20,30,60,0.08);} h2{margin:0 0 12px 0;color:#1f3a93;} p{margin:6px 0;font-size:1.05em;color:#333;} .icon{margin-right:8px;font-size:1.1em;} table{background:#fff;} th,td{font-size:0.95em;} /* emphasize current values */ #hum{font-size:2.4em;font-weight:700;color:#1976d2;margin-left:8px;} #temp{font-size:2.4em;font-weight:700;color:#e64a19;margin-left:8px;} </style>";
   html += "</head><body>";
-  html += "<div class='card'><h2>ESP32 DHT22 (Realtime)</h2>";
+  html += "<div class='card'><h2>ESP32-DHT22 Realtime</h2>";
   html += "<p><strong><span class='icon' style='color:#1976d2'>💧</span> Độ ẩm:</strong> <span id='hum'>";
   if (isnan(humidity)) html += "N/A"; else html += String(humidity, 2) + " %";
   html += "</span></p>";
@@ -42,7 +42,7 @@ void handleRoot() {
   if (isnan(temperature)) html += "N/A"; else html += String(temperature, 2) + " &deg;C";
   html += "</span></p>";
   // history table (last N readings)
-  html += "<h3>10 lần đo gần nhất</h3>";
+  html += "<h3>10 lần đo gần nhất:</h3>";
   html += "<table id='history' style='width:100%;border-collapse:collapse;margin-top:12px;border:1px solid #ddd;'><thead><tr style='background:#f7f9fc;'><th style='padding:8px;border:1px solid #eee;text-align:left;color:#333;'>Thời gian (s)</th><th style='padding:8px;border:1px solid #eee;text-align:left;color:#2a7ae2;'>Độ ẩm</th><th style='padding:8px;border:1px solid #eee;text-align:left;color:#e24a4a;'>Nhiệt độ</th></tr></thead><tbody id='historyBody'></tbody></table>";
   html += "</div>";
 
