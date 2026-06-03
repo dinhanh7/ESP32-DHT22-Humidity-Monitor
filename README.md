@@ -115,13 +115,6 @@ pkill -f "pio device monitor"
 - Lỗi: thiếu tkinter: cài `python3-tk` như phần trên.
 - Lỗi: `pio` không tìm thấy: đảm bảo bạn cài PlatformIO trong cùng môi trường Python đang dùng và `pio` nằm trong PATH.
 
-Liên hệ & mở rộng
-------------------
-Nếu bạn muốn tôi:
-- chuyển từ polling sang SSE/WebSocket để cập nhật liền mạch;
-- thêm biểu đồ realtime trên web (canvas/Chart.js);
-- hoặc tự động chạy Monitor sau khi upload — tôi sẽ bổ sung.
-
 ---
 File chính của dự án:
 - [src/main.cpp](src/main.cpp)
